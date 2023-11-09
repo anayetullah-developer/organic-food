@@ -27,7 +27,7 @@ const RightSideBar = () => {
   console.log(textSize);
 
   return (
-    <div className="bg-white w-1/5 rounded-lg hidden md:block">
+    <div className="bg-white w-1/5 max-w-[19rem] rounded-lg hidden md:block">
       <div className="border border-gray-300 rounded mb-6">
         <div
           className="flex justify-between items-center p-4 cursor-pointer"
@@ -107,7 +107,7 @@ const RightSideBar = () => {
               </button>
 
               {isDropDownOpen && (
-                <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                <div className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white ">
                   <div className="py-1">
                     {fruits.map((fruit, index) => (
                       <a

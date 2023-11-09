@@ -10,7 +10,7 @@ const ContentArea = () => {
   const [, , paragraph3] = paragraphs;
 
   return (
-    <main className="flex bg-white md:w-3/5 p-5 rounded-lg">
+    <main className="flex bg-white md:w-3/5 flex-grow p-5 rounded-lg">
       <div className="hidden md:flex flex-col gap-5 pr-6 py-14">
         <svg
           xmlns="http://www.w3.org/2000/svg"

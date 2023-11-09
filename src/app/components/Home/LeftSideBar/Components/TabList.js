@@ -10,7 +10,7 @@ const TabList = ({fruit}) => {
                     <Image src={fruit.image} width={43} height={43} unoptimized  alt={fruit.name}/>
                 </div>
                 <div>
-                    <h5 className='text-sm font-bold'>{fruit.name}</h5>
+                    <h5 className='text-sm font-bold'>{fruit.fruitName}</h5>
                     <p>{fruit.vitamine}</p>
                 </div>
             </div>

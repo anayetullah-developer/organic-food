@@ -167,7 +167,7 @@ const TopBar = () => {
         </div> 
         }
           {isMenuOpen && (
-        <div className="absolute top-0 left-0 mt-2 w-10/12 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+        <div className="z-50 left-0 md:left-[79%] lg:left-[85%] absolute top-16 md:right-0 mt-2 max-w-[18rem] w-10/12 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
           <LeftSideBar/>
         </div>
       )}
