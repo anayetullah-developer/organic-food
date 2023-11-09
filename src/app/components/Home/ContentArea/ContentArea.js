@@ -68,8 +68,6 @@ const ContentArea = () => {
         <div>
           <Rating/>
         </div>
-        <h1>hi</h1>
-        <MobileSidebar/>
       </div>
     </main>
   );

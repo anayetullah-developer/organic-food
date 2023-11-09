@@ -28,7 +28,7 @@ const RightSideBar = () => {
 
   return (
     <div className="bg-white w-1/5 rounded-lg hidden md:block">
-      <div className="border border-gray-300 rounded">
+      <div className="border border-gray-300 rounded mb-6">
         <div
           className="flex justify-between items-center p-4 cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
@@ -49,11 +49,15 @@ const RightSideBar = () => {
         </div>
         {isOpen && (
           <div className="p-4 border-t border-gray-300">
-            <div className="flex justify-between items-center">
-              <div>Paragraph font size</div>
-              <div>{sizeNumber}</div>
+            <div className="flex mb-5 justify-between items-center">
+              <div className="text-sm text-[#101010] font-medium">
+                Paragraph font size
+              </div>
+              <div className="text-[#E55527] text-sm font-medium">
+                {sizeNumber}
+              </div>
             </div>
-            <div className="w-full">
+            <div className="w-full mb-5">
               <input
                 type="range"
                 min="12"
@@ -62,15 +66,11 @@ const RightSideBar = () => {
                 onChange={(e) =>
                   updateTextSize("fontSize", e.target.value + "px")
                 }
-                className="bg-[#D5D8DC] w-full appearance-none h-[5px] rounded-full hover:bg-[#D5D8DC]"
+                className="bg-[#D5D8DC] w-full appearance-none h-[5px] rounded-full hover:bg-[#E55527]"
               />
             </div>
-            <label className="flex items-center cursor-pointer">
-              <div
-                className={`relative w-10 h-4 bg-gray-400 rounded-full shadow-inner ${
-                  isChecked ? "bg-red-500" : ""
-                }`}
-              >
+            <label className="flex items-center cursor-pointe mb-5">
+              <div className="relative flex-shrink-0 w-10 overflow-hidden h-5 border border-[#10101027] bg-white rounded-full shadow-inner">
                 <input
                   type="checkbox"
                   id="toggle"
@@ -79,11 +79,11 @@ const RightSideBar = () => {
                   onChange={toggleSwitch}
                 />
                 <div
-                  className={`toggle__dot absolute w-6 h-6 bg-white rounded-full shadow ${
+                  className={`toggle__dot absolute w-4 h-4 bg-[#10101027] rounded-full shadow ${
                     isChecked
-                      ? "transform translate-x-full bg-red-500 -left-1"
-                      : "-left-1"
-                  }`}
+                      ? "transform translate-x-full bg-[#E55527] left-[4px] top-[1px]"
+                      : "left-[2px] top-[1px]"
+                  } transition-transform`}
                 ></div>
               </div>
               <div className="ml-3 text-gray-700 font-medium">
@@ -92,33 +92,36 @@ const RightSideBar = () => {
             </label>
 
             <div className="relative text-left">
-      <button
-        onClick={() => setDropDownOpen(!isDropDownOpen)}
-        type="button"
-        className="flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
-      >
-        Vitamins
-        <span className="ml-2">
-          {isDropDownOpen ? '🔽' : '🔼'}
-        </span>
-      </button>
-
-      {isDropDownOpen && (
-        <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-          <div className="py-1">
-            {fruits.map((fruit, index) => (
-              <a
-                key={index}
-                href="#"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              <div className="text-sm text-[#101010] font-medium mb-5">
+                Choose Vitamin type
+              </div>
+              <button
+                onClick={() => setDropDownOpen(!isDropDownOpen)}
+                type="button"
+                className="flex justify-between items-center w-full rounded-lg px-4 py-2 bg-[#10101021]  text-sm font-medium text-[#101010] focus:outline-none hover:text-[#E55527] hover:font-medium"
               >
-                {fruit.vitamine}
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
+                Vitamins
+                <span className="ml-2">
+                  {isDropDownOpen ? <FiChevronUp /> : <FiChevronDown />}
+                </span>
+              </button>
+
+              {isDropDownOpen && (
+                <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                  <div className="py-1">
+                    {fruits.map((fruit, index) => (
+                      <a
+                        key={index}
+                        href="#"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      >
+                        {fruit.vitamine}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         )}
       </div>
