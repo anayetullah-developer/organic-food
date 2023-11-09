@@ -11,8 +11,8 @@ export default function Home() {
       <TopBar />
       <div className="flex justify-start bg-white">
         <LeftBar />
-        <div className="flex justify-between bg-[#E5E7EB] w-full gap-3 border-8 rounded-md mt-3">
-          <div className="bg-white w-1/5 max-w-[19rem] rounded-lg hidden md:block">
+        <div className="flex justify-between bg-[#E5E7EB] w-full gap-4 border-[1rem] rounded-md mt-3">
+          <div className="bg-[#E5E7EB] w-1/5 max-w-[19rem] rounded-lg hidden md:block">
             <LeftSideBar />
           </div>
           <Main />

@@ -24,18 +24,17 @@ const RightSideBar = () => {
     setSizeNumber(value);
   };
 
-  console.log(textSize);
 
   return (
-    <div className="bg-white w-1/5 max-w-[19rem] rounded-lg hidden md:block">
-      <div className="border border-gray-300 rounded mb-6">
+    <div className="bg-white w-1/5 max-w-[19rem] rounded-lg hidden md:block p-3">
+      <div className=" border-gray-300 rounded-lg mb-6  border-2 ">
         <div
           className="flex justify-between items-center p-4 cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
           <div className="flex gap-2">
             <Image src={textIcon} alt="Text Icon" />
-            <h2 style={textSize} className="font-semibold text-[#E55527]">
+            <h2 className="font-semibold text-[#E55527]">
               Setting
             </h2>
           </div>
@@ -69,28 +68,7 @@ const RightSideBar = () => {
                 className="bg-[#D5D8DC] w-full appearance-none h-[5px] rounded-full hover:bg-[#E55527]"
               />
             </div>
-            <label className="flex items-center cursor-pointe mb-5">
-              <div className="relative flex-shrink-0 w-10 overflow-hidden h-5 border border-[#10101027] bg-white rounded-full shadow-inner">
-                <input
-                  type="checkbox"
-                  id="toggle"
-                  className="hidden"
-                  checked={isChecked}
-                  onChange={toggleSwitch}
-                />
-                <div
-                  className={`toggle__dot absolute w-4 h-4 bg-[#10101027] rounded-full shadow ${
-                    isChecked
-                      ? "transform translate-x-full bg-[#E55527] left-[4px] top-[1px]"
-                      : "left-[2px] top-[1px]"
-                  } transition-transform`}
-                ></div>
-              </div>
-              <div className="ml-3 text-gray-700 font-medium">
-                Toggle Switch
-              </div>
-            </label>
-
+            
             <div className="relative text-left">
               <div className="text-sm text-[#101010] font-medium mb-5">
                 Choose Vitamin type
@@ -122,6 +100,28 @@ const RightSideBar = () => {
                 </div>
               )}
             </div>
+
+            <label className="flex items-center cursor-pointe mt-5">
+              <div className="relative flex-shrink-0 w-10 overflow-hidden h-5 border border-[#10101027] bg-white rounded-full shadow-inner">
+                <input
+                  type="checkbox"
+                  id="toggle"
+                  className="hidden"
+                  checked={isChecked}
+                  onChange={toggleSwitch}
+                />
+                <div
+                  className={`toggle__dot absolute w-4 h-4 bg-[#10101027] rounded-full shadow ${
+                    isChecked
+                      ? "transform translate-x-full bg-[#E55527] left-[4px] top-[1px]"
+                      : "left-[2px] top-[1px]"
+                  } transition-transform`}
+                ></div>
+              </div>
+              <div className="ml-3 text-sm text-[#101010] font-medium">
+                Turn Off Subtitle
+              </div>
+            </label>
           </div>
         )}
       </div>

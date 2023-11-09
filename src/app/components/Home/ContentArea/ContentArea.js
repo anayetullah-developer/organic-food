@@ -4,7 +4,6 @@ import Paragraph from "./Components/Paragraph";
 import { paragraphs } from "@/app/data/data";
 import Featured from "./Components/Featured";
 import Rating from "./Components/Rating";
-import MobileSidebar from "./Components/MobileSideBar";
 
 const ContentArea = () => {
   const [, , paragraph3] = paragraphs;

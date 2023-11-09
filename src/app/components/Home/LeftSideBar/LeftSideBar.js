@@ -34,13 +34,12 @@ const LeftSideBar = () => {
             </button>
           </div>
           <div className="my-5">
-            {/* Content for the "Fruits" tab */}
             {activeTab === "fruits" && (
               <>
                 <div class="relative mb-5">
                   <input
                     type="text"
-                    class="w-full pr-1 pl-3 py-2 w-full rounded-lg border-2 border-[#F0F2F4] focus:outline-none text-[#101010] text-xs"
+                    class="w-full pr-1 pl-3 py-2 rounded-lg border-2 border-[#F0F2F4] focus:outline-none text-[#101010] text-xs"
                     placeholder="Search Best Food..."
                   />
                   <div class="absolute inset-y-1 right-1 flex justify-center p-1 items-center cursor-pointer rounded border-2 border-[#F5E4E1] bg-[#FFEEE9]">
@@ -70,7 +69,6 @@ const LeftSideBar = () => {
               </>
             )}
 
-            {/* Content for the "Vegetables" tab */}
             {activeTab === "vegetables" && (
               <>
                 <div class="relative mb-5">
@@ -98,7 +96,6 @@ const LeftSideBar = () => {
                 </div>
 
                 <div className="vegetables-tab">
-                  {/* Place your Vegetables content here */}
                   <p>This is the content for the Vegetables tab.</p>
                 </div>
               </>
