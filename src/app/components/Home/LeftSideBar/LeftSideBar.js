@@ -8,7 +8,7 @@ const LeftSideBar = () => {
     setActiveTab(tabName);
   };
   return (
-    <div className="bg-white w-1/5 rounded-lg hidden md:block">
+    <div className="">
       <div className="w-full">
         <div className="bg-white shadow-md rounded-lg p-2">
           <div className="flex border-2 border-[#e556272f] p-1 rounded-lg">

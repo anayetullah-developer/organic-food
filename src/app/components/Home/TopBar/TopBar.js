@@ -1,14 +1,22 @@
+"use client"
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import logo from "@/app/assets/images/logo.svg";
-
+import { FaTimes } from "react-icons/fa";
+import { fruits } from "@/app/data/data";
+import LeftSideBar from "../LeftSideBar/LeftSideBar";
 const TopBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className="bg-white text-black text-center px-6 py-3 flex justify-between">
       <div>
         <Image src={logo} alt="Logo" />
       </div>
-      <div class="relative w-[23rem]">
+      <div class="relative hidden md:block w-[23rem]">
         <input
           type="text"
           class="w-full pr-1 pl-3 py-2 rounded-lg border-2 border-[#F0F2F4] focus:outline-none text-[#101010] text-xs"
@@ -33,7 +41,7 @@ const TopBar = () => {
       </div>
 
       <div className="flex items-center gap-6">
-        <div className="border-2 border-[#F5E4E1] bg-[#FFEEE9] p-1 rounded-lg" >
+        <div className="border-2 hidden md:block border-[#F5E4E1] bg-[#FFEEE9] p-1 rounded-lg" >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -57,7 +65,7 @@ const TopBar = () => {
             />
           </svg>
         </div>
-        <div className="border-2 border-[#F5E4E1] bg-[#FFEEE9] p-1 rounded-lg" >
+        <div className="hidden md:block border-2 border-[#F5E4E1] bg-[#FFEEE9] p-1 rounded-lg" >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="22"
@@ -109,7 +117,24 @@ const TopBar = () => {
             />
           </svg>
         </div>
-        <div className="border-2 bg-[#E7E7E7] p-1 rounded-lg" >
+        <div class=" md:hidden block flex justify-center p-1 items-center cursor-pointer rounded border-2 border-[#F5E4E1] bg-[#FFEEE9]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="24"
+            height="24"
+            viewBox="0,0,256,256"
+          >
+            <g fill="#e55527">
+              <g transform="scale(4,4)">
+                <path d="M27,9c-9.925,0 -18,8.075 -18,18c0,9.925 8.075,18 18,18c4.12921,0 7.9263,-1.41263 10.9668,-3.75977l13.08203,13.08203c0.904,0.904 2.36944,0.904 3.27344,0c0.904,-0.904 0.904,-2.36944 0,-3.27344l-13.08203,-13.08203c2.34713,-3.0405 3.75977,-6.83758 3.75977,-10.9668c0,-9.925 -8.075,-18 -18,-18zM27,13c7.719,0 14,6.281 14,14c0,7.719 -6.281,14 -14,14c-7.719,0 -14,-6.281 -14,-14c0,-7.719 6.281,-14 14,-14z"></path>
+              </g>
+            </g>
+          </svg>
+        </div>
+        {
+          isMenuOpen ? <div onClick={toggleMenu}><FaTimes/></div> : <div className="border-2 bg-[#E7E7E7] p-1 rounded-lg"  onClick={toggleMenu}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -139,7 +164,13 @@ const TopBar = () => {
               stroke-linejoin="round"
             />
           </svg>
+        </div> 
+        }
+          {isMenuOpen && (
+        <div className="absolute top-0 left-0 mt-2 w-10/12 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+          <LeftSideBar/>
         </div>
+      )}
       </div>
     </header>
   );

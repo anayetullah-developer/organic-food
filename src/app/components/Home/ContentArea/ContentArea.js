@@ -3,6 +3,8 @@ import Hero from "./Components/Hero";
 import Paragraph from "./Components/Paragraph";
 import { paragraphs } from "@/app/data/data";
 import Featured from "./Components/Featured";
+import Rating from "./Components/Rating";
+import MobileSidebar from "./Components/MobileSideBar";
 
 const ContentArea = () => {
   const [, , paragraph3] = paragraphs;
@@ -63,6 +65,11 @@ const ContentArea = () => {
         <Hero />
         <Paragraph paragraph={paragraph3} />
         <Featured />
+        <div>
+          <Rating/>
+        </div>
+        <h1>hi</h1>
+        <MobileSidebar/>
       </div>
     </main>
   );
