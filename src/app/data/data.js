@@ -21,36 +21,50 @@ export const paragraphs = [
 export const fruits = [
   {
     fruitName: "Oranges",
-    vitamine: "Vitamin C"
-  },
-  {
-    fruitName: "Apple",
-    vitamine: "Vitamin C"
-  },
-  {
-    fruitName: "Avocado",
-    vitamine: "Vitamin B6"
+    vitamine: "Vitamin C",
+    image: "https://i.ibb.co/cJwRv0b/name-2.png"
   },
   
   {
-    fruitName: "Strawberries",
-    vitamine: "Vitamin C"
+    fruitName: "Oranges",
+    vitamine: "Vitamin C",
+    image: "https://i.ibb.co/cJwRv0b/name-2.png"
   },
+  
   {
-    fruitName: "Mangoes",
-    vitamine: "Vitamin C"
+    fruitName: "Oranges",
+    vitamine: "Vitamin C",
+    image: "https://i.ibb.co/cJwRv0b/name-2.png"
   },
+  
   {
-    fruitName: "Blueberries",
-    vitamine: "Vitamin C, K"
+    fruitName: "Oranges",
+    vitamine: "Vitamin C",
+    image: "https://i.ibb.co/cJwRv0b/name-2.png"
   },
+  
   {
-    fruitName: "Grapes",
-    vitamine: "Vitamin C, K"
+    fruitName: "Oranges",
+    vitamine: "Vitamin C",
+    image: "https://i.ibb.co/cJwRv0b/name-2.png"
   },
-
+  
   {
-    fruitName: "Pineapples",
-    vitamine: "Vitamin C, K"
-  }
+    fruitName: "Oranges",
+    vitamine: "Vitamin C",
+    image: "https://i.ibb.co/cJwRv0b/name-2.png"
+  },
+  
+  {
+    fruitName: "Oranges",
+    vitamine: "Vitamin C",
+    image: "https://i.ibb.co/cJwRv0b/name-2.png"
+  },
+  
+  {
+    fruitName: "Oranges",
+    vitamine: "Vitamin C",
+    image: "https://i.ibb.co/cJwRv0b/name-2.png"
+  },
+  
 ]

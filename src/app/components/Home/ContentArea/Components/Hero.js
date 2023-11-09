@@ -1,4 +1,4 @@
-import { paragraphs } from "@/app/data/paragraphs";
+import { paragraphs } from "@/app/data/data";
 import React from "react";
 import Paragraph from "./Paragraph";
 import Image from "next/image";

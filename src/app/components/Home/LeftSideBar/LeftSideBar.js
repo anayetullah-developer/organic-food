@@ -1,10 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import TabList from "./Components/TabList";
-
+import { fruits } from "@/app/data/data";
 const LeftSideBar = () => {
   const [activeTab, setActiveTab] = useState("fruits");
-
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
   };
@@ -62,8 +61,11 @@ const LeftSideBar = () => {
                   </div>
                 </div>
                 <div className="fruits-tab">
-                  {/* Place your Fruits content here */}
-                  <TabList/>
+                <h6 className='text-xs font-bold'>Item lists</h6>
+
+                 {
+                  fruits.map((fruit, index) => <TabList key={index} fruit={fruit}/>)
+                 }
                 </div>
               </>
             )}

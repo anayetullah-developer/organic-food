@@ -1,5 +1,5 @@
 import appleImg from "@/app/assets/images/apple.png"
-import { paragraphs } from "@/app/data/paragraphs";
+import { paragraphs } from "@/app/data/data";
 import Image from "next/image";
 import Paragraph from "./Paragraph";
 const Featured = () => {

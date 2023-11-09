@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "./Components/Hero";
 import Paragraph from "./Components/Paragraph";
-import { paragraphs } from "@/app/data/paragraphs";
+import { paragraphs } from "@/app/data/data";
 import Featured from "./Components/Featured";
 
 const ContentArea = () => {
