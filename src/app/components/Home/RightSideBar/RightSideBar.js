@@ -29,7 +29,7 @@ const RightSideBar = () => {
     <div className="bg-white w-1/5 max-w-[19rem] rounded-lg hidden md:block p-3">
       <div className=" border-gray-300 rounded-lg mb-6  border-2 ">
         <div
-          className="flex justify-between items-center p-4 cursor-pointer"
+          className="flex justify-between items-center p-2 cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
           <div className="flex gap-2">

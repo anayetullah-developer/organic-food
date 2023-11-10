@@ -2,7 +2,7 @@ import React from "react";
 
 const Navigation = () => {
   return (
-    <div className="bg-white text-black flex flex-row md:flex-col justify-center md:justify-start mt-32 items-center px-4">
+    <div className="bg-white text-black flex flex-row md:flex-col justify-center md:justify-start md:mt-32 items-center px-4">
       <div className="flex md:flex-col flex-row justify-center items-center gap-9 py-3 md:py-0">
         <div className="p-2 bg-[#F3F3F3] rounded-lg">
           <svg
