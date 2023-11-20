@@ -85,7 +85,7 @@ const RightSideBar = () => {
               </button>
 
               {isDropDownOpen && (
-                <div className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white ">
+                <div className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white z-10">
                   <div className="py-1">
                     {fruits.map((fruit, index) => (
                       <a

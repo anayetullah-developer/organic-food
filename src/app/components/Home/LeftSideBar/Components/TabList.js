@@ -7,7 +7,7 @@ const TabList = ({fruit}) => {
         <div>
             <div className='flex items-center mt-5 gap-5 border-2 hover:border-[#e5562786] p-3 rounded-lg'>
                 <div>
-                    <Image src={fruit.image} width={43} height={43} unoptimized  alt={fruit.name}/>
+                    <Image src={fruit.image} width={43} height={43} alt={fruit.name}/>
                 </div>
                 <div>
                     <h5 className='text-sm font-bold'>{fruit.fruitName}</h5>

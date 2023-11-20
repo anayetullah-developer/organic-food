@@ -6,9 +6,7 @@ module.exports = {
       remotePatterns: [
         {
           protocol: 'https',
-          hostname: 'ibb.co',
-          port: '',
-          pathname: 'album/4sXDVN',
+          hostname: 'i.ibb.co',
         },
       ],
     },
